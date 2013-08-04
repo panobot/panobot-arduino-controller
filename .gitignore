@@ -1,0 +1,10 @@
+# Backup files
+*.bak
+*~
+
+# Eclipse
+.project
+.classpath
+
+# Maven
+target
