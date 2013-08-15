@@ -31,16 +31,22 @@ void loop()
 
   potval = analogRead(potpin);
   Serial.print(potval);
-  Serial.print(" ");
+  Serial.println();
 
   potval = map(potval, 0, 1023, 0, 179);
-  Serial.print(potval);
-  Serial.print(" ");
 
-  Serial.println();
+  print_state();
 
   pan.write(potval);
   delay(500);
+}
+
+void print_state()
+{
+  Serial.print("PAN: ");
+  Serial.print(potval);
+
+  Serial.println();
 }
 
 
